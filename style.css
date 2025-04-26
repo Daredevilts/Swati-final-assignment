@@ -1,0 +1,24 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6f0;
+  color: #5b3924;
+}
+
+.bg-brown {
+  background-color: #8B4513;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
