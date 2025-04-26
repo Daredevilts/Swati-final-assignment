@@ -105,7 +105,14 @@
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
+  </script>
+    <script>
   // Auto-close navbar on link click (for mobile)
   const navLinks = document.querySelectorAll('.nav-link');
   const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -118,12 +125,6 @@
     });
   });
 </script>
-
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
 </html>
