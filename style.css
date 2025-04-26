@@ -1,27 +1,17 @@
-/* ================================
-   Base Setup
+/* ===============================
+    General Styles
 ================================ */
-:root {
-  --primary-color: #6f4e37;
-  --secondary-color: #54362b;
-  --accent-color: #d8b4a0;
-  --bg-color: #f8f5f2;
-  --text-color: #333;
-  --font-main: 'Poppins', sans-serif;
-}
-
-*,
-*::before,
-*::after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f8f5f2;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
@@ -30,157 +20,150 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ================================
-   Navbar
+/* ===============================
+    Navbar
 ================================ */
 .navbar {
-  background-color: var(--primary-color);
-  transition: background-color 0.3s ease;
+  background-color: #4B2C20;
 }
 
-.navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.navbar-nav .nav-link {
+.nav-link {
+  margin-right: 15px;
   font-weight: 500;
-  margin-left: 1rem;
-  transition: color 0.3s;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-  color: var(--accent-color);
+.nav-link:hover,
+.nav-link.active {
+  color: #f7c59f;
 }
 
-/* ================================
-   Hero Section
+/* ===============================
+    Hero Section
 ================================ */
 .hero-section {
-  position: relative;
-  height: 90vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+  padding: 120px 0;
   text-align: center;
+  background-attachment: fixed;
 }
 
 .hero-section h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .hero-section p {
   font-size: 1.5rem;
-  font-weight: 300;
 }
 
+/* ===============================
+    Buttons
+================================ */
 .btn-brown {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #8B5E3C;
+  color: #fff;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 12px 30px;
+  border-radius: 30px;
   font-weight: 600;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-brown:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
+  background-color: #6c422c;
+  transform: translateY(-3px);
 }
 
-/* ================================
-   Features Section
+/* ===============================
+    Cards
 ================================ */
-.feature-icon {
-  font-size: 3rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.features h5 {
-  font-weight: 600;
-  margin-top: 1rem;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.features p {
-  color: #666;
+/* ===============================
+    Special Sections
+================================ */
+section {
+  padding: 80px 0;
 }
 
-/* ================================
-   Footer
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+    Form Inputs
+================================ */
+.glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+.glass-input:focus {
+  border-color: #8B5E3C;
+  outline: none;
+  background: #fff;
+}
+
+/* ===============================
+    Footer
 ================================ */
 footer {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #4B2C20;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 1rem 0;
   font-size: 0.9rem;
 }
 
-/* ================================
-   Animations
-================================ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 1s ease forwards;
-}
-
-/* ================================
-   Media Queries
+/* ===============================
+    Responsive Design
 ================================ */
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2.5rem;
   }
+
   .hero-section p {
     font-size: 1.2rem;
   }
-}
 
-@media (max-width: 576px) {
-  .navbar-nav {
-    background-color: var(--primary-color);
-    padding: 1rem;
+  .btn-brown {
+    padding: 10px 25px;
+    font-size: 1rem;
   }
-}
-
-/* ================================
-   Extra Goodies
-================================ */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.shadow-sm {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.shadow-lg {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
