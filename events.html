@@ -3,42 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Events | Brew Bliss Café</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Events - Brew Bliss</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Brew Bliss Café</a>
+      <a class="navbar-brand" href="index.html">Brew Bliss</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-          <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Upcoming Events</h2>
-    <ul class="list-group">
-      <li class="list-group-item">Open Mic Night - Every Thursday @ 7PM</li>
-      <li class="list-group-item">Live Jazz Sessions - First Saturday of Every Month</li>
-      <li class="list-group-item">Latte Art Competition - June 15th</li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="hero-section text-white" style="background-image: url('https://source.unsplash.com/1600x900/?coffee-event');">
+    <div class="container animate-fadeInUp">
+      <h1>Our Events</h1>
+      <p>Experience the magic of Brew Bliss!</p>
+    </div>
   </section>
 
-  <footer class="text-center p-3 bg-brown text-light">
-    &copy; 2025 Brew Bliss Café. All rights reserved.
+  <!-- Events Section -->
+  <section class="container my-5">
+    <div class="row">
+
+      <!-- Event 1 -->
+      <div class="col-md-6 mb-4" data-aos="fade-up">
+        <div class="card glass-effect p-3 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?music,coffee" class="card-img-top rounded" alt="Event Image">
+          <div class="card-body">
+            <h4 class="card-title">Live Music Nights</h4>
+            <p class="card-text">Every Friday, join us for soulful live music performances while you sip your favorite brews!</p>
+            <p class="text-muted"><i class="bi bi-calendar-event"></i> Every Friday | 7 PM Onwards</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card glass-effect p-3 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?workshop,coffee" class="card-img-top rounded" alt="Event Image">
+          <div class="card-body">
+            <h4 class="card-title">Coffee Brewing Workshops</h4>
+            <p class="card-text">Learn the art of brewing from our master baristas. Hands-on experience with different techniques!</p>
+            <p class="text-muted"><i class="bi bi-calendar-event"></i> 1st Sunday of Every Month | 10 AM - 1 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card glass-effect p-3 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?openmic,coffee" class="card-img-top rounded" alt="Event Image">
+          <div class="card-body">
+            <h4 class="card-title">Open Mic Evenings</h4>
+            <p class="card-text">Showcase your talent or enjoy the vibe. Poetry, comedy, music, and more - everyone is welcome!</p>
+            <p class="text-muted"><i class="bi bi-calendar-event"></i> Every Wednesday | 6 PM Onwards</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Brew Bliss. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
 </body>
 </html>
