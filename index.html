@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papwrap Solutions Pvt Ltd</title>
+    <title>Papwrap - Print Your Dreams</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- AOS Animation CDN -->
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -18,81 +21,123 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: #0d0d0d;
+            color: #ccc;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 
-<body class="bg-black text-gray-200">
+<body>
     <!-- Navbar -->
-    <nav class="flex justify-between items-center p-5 bg-gray-900 shadow-md sticky top-0 z-50">
-        <div class="flex items-center gap-3">
-            <img src="your-logo-path.jpg" alt="Papwrap Logo" class="h-10">
-            <span class="text-xl font-bold">Papwrap</span>
-        </div>
-        <div class="hidden md:flex gap-8">
-            <a href="index.html" class="hover:text-blue-400">Home</a>
-            <a href="about.html" class="hover:text-blue-400">About</a>
-            <a href="menu.html" class="hover:text-blue-400">Services</a>
-            <a href="events.html" class="hover:text-blue-400">Events</a>
-            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="your-logo-path.jpg" alt="Papwrap Logo" height="40" class="me-2">
+                <strong>Papwrap</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-gray-900 to-black" data-aos="fade-up">
-        <h1 class="text-5xl font-extrabold mb-6">Print Your Dreams With <span class="text-blue-500">Papwrap</span></h1>
-        <p class="text-lg text-gray-400 mb-8">We print everything you need and deliver it right to your doorstep!</p>
-        <a href="menu.html" class="px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold transition">Explore Services</a>
+    <section class="text-center py-5 bg-black text-white" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Print Your Dreams with <span class="text-primary">Papwrap</span></h1>
+            <p class="lead text-muted mt-3">We print everything you need and deliver it to your doorstep!</p>
+            <a href="menu.html" class="btn btn-primary btn-lg mt-4">Explore Our Services</a>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 px-5 bg-black" id="services">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl font-bold">Our Services</h2>
-            <p class="text-gray-400 mt-2">Professional, Fast & Reliable Printing Services</p>
-        </div>
-
-        <div class="grid gap-10 grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="p-6 bg-gray-800 rounded-lg hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-3">3D Printing</h3>
-                <p class="text-gray-400">Innovative 3D prints for prototypes, gifts, and more.</p>
+    <section class="py-5" id="services">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Our Services</h2>
+                <p class="text-muted">Top-notch printing solutions for all your needs</p>
             </div>
-            <div class="p-6 bg-gray-800 rounded-lg hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-3">Banners & Posters</h3>
-                <p class="text-gray-400">High-quality, vibrant banners to catch every eye.</p>
-            </div>
-            <div class="p-6 bg-gray-800 rounded-lg hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold mb-3">Brochure & Business Cards</h3>
-                <p class="text-gray-400">First impressions matter. Print professionally with us.</p>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card text-center">
+                        <h4 class="fw-semibold mb-3">3D Printing</h4>
+                        <p>High-quality 3D prototypes, models, and more delivered fast.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card text-center">
+                        <h4 class="fw-semibold mb-3">Banners & Posters</h4>
+                        <p>Custom banners and posters to catch every eye and grow your brand.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card text-center">
+                        <h4 class="fw-semibold mb-3">Brochures & Business Cards</h4>
+                        <p>Premium brochures and business cards that leave a lasting impression.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="py-20 px-5 bg-gray-900 text-center" data-aos="fade-up">
-        <h2 class="text-4xl font-bold mb-10">Why Choose Papwrap?</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-            <div class="max-w-sm">
-                <h3 class="text-2xl font-semibold mb-2">Fast Delivery</h3>
-                <p class="text-gray-400">Quick turnaround times with doorstep delivery.</p>
-            </div>
-            <div class="max-w-sm">
-                <h3 class="text-2xl font-semibold mb-2">High Quality</h3>
-                <p class="text-gray-400">Only premium quality materials and prints.</p>
-            </div>
-            <div class="max-w-sm">
-                <h3 class="text-2xl font-semibold mb-2">Affordable Pricing</h3>
-                <p class="text-gray-400">Best price guaranteed for all printing services.</p>
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-dark text-center text-white">
+        <div class="container" data-aos="fade-up">
+            <h2 class="fw-bold mb-4">Why Choose Papwrap?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h5>Fast Delivery</h5>
+                        <p>Quick printing and doorstep delivery for your convenience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h5>High Quality</h5>
+                        <p>We use premium materials and techniques for outstanding results.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h5>Affordable Prices</h5>
+                        <p>Get the best value without compromising on quality.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-gray-500 text-center py-6">
-        <p>Made with ❤️ by Papwrap Solutions Pvt Ltd | All Rights Reserved &copy; 2025</p>
+    <footer class="py-4 bg-black text-center text-muted">
+        <div class="container">
+            <p>Made with ❤️ by Papwrap Solutions Pvt Ltd | &copy; 2025 All Rights Reserved</p>
+        </div>
     </footer>
 
-    <!-- AOS Script -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
