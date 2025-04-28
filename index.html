@@ -35,23 +35,21 @@
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
+        .navbar-brand img {
+            height: 40px;
+            max-width: 50px;
+            object-fit: contain;
+        }
     </style>
-    <style>
-  .navbar-brand img {
-      height: 40px;
-      max-width: 50px;
-      object-fit: contain;
-  }
-</style>
-
 </head>
 
 <body>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="your-logo-path.png" alt="Papwrap Logo" height="40" style="object-fit: contain; max-width: 100%;" class="me-2">
+      <img src="your-logo-path.png" alt="Papwrap Logo" class="me-2">
       <strong>Papwrap</strong>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,98 +67,84 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
+<section class="text-center py-5 bg-black text-white" data-aos="fade-up">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Print Your Dreams with <span class="text-primary">Papwrap</span></h1>
+        <p class="lead text-muted mt-3">We print everything you need and deliver it to your doorstep!</p>
+        <a href="services.html" class="btn btn-primary btn-lg mt-4">Explore Our Services</a>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="text-center py-5 bg-black text-white" data-aos="fade-up">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Print Your Dreams with <span class="text-primary">Papwrap</span></h1>
-            <p class="lead text-muted mt-3">We print everything you need and deliver it to your doorstep!</p>
-            <a href="services.html" class="btn btn-primary btn-lg mt-4">Explore Our Services</a>
-
+<!-- Services Section -->
+<section class="py-5" id="services">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Our Services</h2>
+            <p class="text-muted">Top-notch printing solutions for all your needs</p>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="py-5" id="services">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold">Our Services</h2>
-                <p class="text-muted">Top-notch printing solutions for all your needs</p>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass-card text-center">
+                    <h4 class="fw-semibold mb-3">3D Printing</h4>
+                    <p>High-quality 3D prototypes, models, and more delivered fast.</p>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card text-center">
-                        <h4 class="fw-semibold mb-3">3D Printing</h4>
-                        <p>High-quality 3D prototypes, models, and more delivered fast.</p>
-                    </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card text-center">
+                    <h4 class="fw-semibold mb-3">Banners & Posters</h4>
+                    <p>Custom banners and posters to catch every eye and grow your brand.</p>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card text-center">
-                        <h4 class="fw-semibold mb-3">Banners & Posters</h4>
-                        <p>Custom banners and posters to catch every eye and grow your brand.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card text-center">
-                        <h4 class="fw-semibold mb-3">Brochures & Business Cards</h4>
-                        <p>Premium brochures and business cards that leave a lasting impression.</p>
-                    </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass-card text-center">
+                    <h4 class="fw-semibold mb-3">Brochures & Business Cards</h4>
+                    <p>Premium brochures and business cards that leave a lasting impression.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Why Choose Us -->
-    <section class="py-5 bg-dark text-center text-white">
-        <div class="container" data-aos="fade-up">
-            <h2 class="fw-bold mb-4">Why Choose Papwrap?</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h5>Fast Delivery</h5>
-                        <p>Quick printing and doorstep delivery for your convenience.</p>
-                    </div>
+<!-- Why Choose Us -->
+<section class="py-5 bg-dark text-center text-white">
+    <div class="container" data-aos="fade-up">
+        <h2 class="fw-bold mb-4">Why Choose Papwrap?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <h5>Fast Delivery</h5>
+                    <p>Quick printing and doorstep delivery for your convenience.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h5>High Quality</h5>
-                        <p>We use premium materials and techniques for outstanding results.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <h5>High Quality</h5>
+                    <p>We use premium materials and techniques for outstanding results.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h5>Affordable Prices</h5>
-                        <p>Get the best value without compromising on quality.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <h5>Affordable Prices</h5>
+                    <p>Get the best value without compromising on quality.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-black text-center text-muted">
-        <div class="container">
-            <p>Made with ❤️ by Papwrap Solutions Pvt Ltd | &copy; 2025 All Rights Reserved</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="py-4 bg-black text-center text-muted">
+    <div class="container">
+        <p>Made with ❤️ by Papwrap Solutions Pvt Ltd | &copy; 2025 All Rights Reserved</p>
+    </div>
+</footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<!-- Navbar Toggle Fix -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var navbarToggler = document.querySelector('.navbar-toggler');
-        var navbarCollapse = document.getElementById('navbarNav');
-
-        navbarToggler.addEventListener('click', function () {
-            navbarCollapse.classList.toggle('show');
-        });
-    });
-</script>
 
 <!-- AOS Initialize -->
 <script>
